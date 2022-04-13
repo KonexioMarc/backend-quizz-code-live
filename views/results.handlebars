@@ -1,0 +1,14 @@
+<div class="container">
+    {{#each questionList }}
+    <div>
+        <span>{{ this.question }} </span>
+        <span>Oui: {{this.answer.oui}}</span>
+        <span>Non: {{this.answer.non}}</span>
+    </div>
+    {{/each}}
+
+    <form method="post" action="/add">
+        <input name="newQuestion" type="text"/>
+        <button type="submit">Ajouter une question</button>
+    </form>
+</div>
